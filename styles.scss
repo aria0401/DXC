@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "gt_walsheim_probold";
+  src: url("fonts/gt-walsheim-pro-bold-webfont.woff2") format("woff2"), url("fonts/gt-walsheim-pro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gt_walsheim_prolight";
+  src: url("fonts/gt-walsheim-pro-light-webfont.woff2") format("woff2"), url("fonts/gt-walsheim-pro-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gt_walsheim_proregular";
+  src: url("fonts/gt-walsheim-pro-regular-webfont.woff2") format("woff2"), url("fonts/gt-walsheim-pro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,17 +30,356 @@ $blue: #1172b9;
 $grey: #d9d9d9;
 $dark-grey: #666666;
 
+/* general styling */
+body {
+  overflow-x: hidden;
+}
+
 section {
-  height: 100vh;
-  outline: 2px solid black;
+  /* height: 100vh; */
+}
+
+h1 {
+  font-family: "gt_walsheim_probold", sans-serif;
+  color: white;
+  font-size: 4vw;
+  padding: 6% 0 2% 2%;
+}
+
+h2 {
+  font-family: "gt_walsheim_probold", sans-serif;
+  font-size: 1.6vw;
+}
+
+p {
+  font-family: "gt_walsheim_proregular", sans-serif;
+  font-size: 1vw;
 }
 
 .main-button {
   text-transform: uppercase;
   text-align: center;
-  padding: 1.2rem 3rem;
-  border-radius: 10px;
-  box-shadow: 4px 4px 5px 0 black;
+  font-family: "gt_walsheim_probold", sans-serif;
+  font-size: 1.1vw;
+  color: white;
+  width: 25vw;
+  height: 4vw;
   outline: none;
-  border: none;
+  border: 2px solid $purple;
+  background-color: $purple;
+  transition: 0.5s all;
+
+  &:hover {
+    background: transparent;
+    color: black;
+  }
+}
+
+.head {
+  width: 100vw;
+  background-image: url("assets/marcelina/headernotext-01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.arrow {
+  width: 4vw;
+  height: 4vw;
+}
+
+.logo {
+  width: 20vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header-desc {
+  font-family: "gt_walsheim_proregular", sans-serif;
+  font-size: 1.7vw;
+  padding-left: 2%;
+  color: white;
+  width: 20em;
+  padding-bottom: 2%;
+}
+
+.intro {
+  padding: 0 0 3% 0;
+}
+
+.intro-heading {
+  text-align: center;
+  padding: 2.5% 0 1.5% 0;
+}
+
+.intro-desc {
+  text-align: center;
+  width: 44em;
+  margin: auto;
+}
+
+.first-brochure {
+  width: 100vw;
+  background-image: url("assets/marcelina/lowersection2.png");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+
+  h2 {
+    padding: 5% 2% 1% 53%;
+  }
+
+  p {
+    padding-left: 53%;
+    width: 80%;
+  }
+
+  button {
+    margin: 2% 2% 5% 53%;
+  }
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 2%;
+}
+
+.video,
+.smooth-change {
+  h2 {
+    padding: 8% 2% 1% 30%;
+    width: 80%;
+  }
+
+  p {
+    padding: 0 0 3% 30%;
+    width: 80%;
+  }
+
+  button {
+    margin-left: 30%;
+  }
+}
+
+.second-brochure {
+  width: 100vw;
+  background-image: url("assets/marcelina/section3.png");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+
+  h2 {
+    padding: 5% 2% 1% 53%;
+  }
+
+  p {
+    padding-left: 53%;
+    width: 78%;
+  }
+
+  button {
+    margin: 2% 2% 5% 53%;
+  }
+}
+
+.main-img {
+  width: 60%;
+  height: auto;
+}
+
+.third-brochure {
+  width: 100vw;
+  background-image: url("assets/marcelina/section4b.png");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+
+  h2 {
+    padding: 5% 2% 1% 53%;
+  }
+
+  p {
+    padding-left: 53%;
+    width: 78%;
+  }
+
+  button {
+    margin: 2% 2% 5% 53%;
+  }
+}
+
+.cloud-wave,
+.it-implement {
+  h2 {
+    padding: 5% 2% 1% 30%;
+    width: 90%;
+  }
+
+  p {
+    padding: 0 0 3% 30%;
+    width: 80%;
+  }
+
+  button {
+    margin-left: 30%;
+  }
+}
+
+.dynamics-365 {
+  h2 {
+    padding: 5% 2% 1% 5%;
+    width: 60%;
+  }
+
+  p {
+    padding: 0 0 3% 5%;
+    width: 60%;
+  }
+
+  button {
+    margin-left: 5%;
+  }
+}
+
+.main-img2 {
+  width: 60%;
+  float: right;
+  margin-right: 10%;
+}
+
+.expert-talk {
+  background: black;
+  p {
+    padding-top: 5%;
+    font-family: "gt_walsheim_probold", sans-serif;
+    color: white;
+    text-align: center;
+  }
+  button {
+    margin: 4% 0 4% 38%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  p {
+    font-size: 1.3vw;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .first-brochure,
+  .second-brochure,
+  .third-brochure {
+    h2 {
+      padding-top: 2.5%;
+    }
+  }
+
+  h2 {
+    font-size: 2vw;
+  }
+  p {
+    font-size: 1.5vw;
+  }
+
+  button {
+    font-size: 1.6vw;
+  }
+
+  .main-img,
+  .main-img2 {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .first-brochure {
+    background-image: url("assets/marcelina/section2tablet-01.png");
+  }
+
+  h2 {
+    font-size: 3.3vw;
+  }
+
+  p {
+    font-size: 2.2vw;
+  }
+
+  .second-brochure {
+    background-image: url("assets/marcelina/section3tabletb.png");
+  }
+
+  .third-brochure {
+    background-image: url("assets/marcelina/section4tablet-01.png");
+  }
+  .first-brochure,
+  .second-brochure,
+  .third-brochure {
+    h2 {
+      padding-top: 7%;
+    }
+
+    button {
+      font-size: 2.3vw;
+      width: 35vw;
+      height: 6vw;
+      margin-bottom: 10%;
+    }
+    p {
+      width: 90%;
+    }
+  }
+
+  .main-img,
+  .main-img2 {
+    width: 100%;
+  }
+
+  .cloud-wave,
+  .it-implement,
+  .smooth-change,
+  .video {
+    h2 {
+      padding: 10% 2% 1% 2%;
+      width: 90%;
+    }
+
+    p {
+      padding: 0 0 3% 2%;
+      width: 90%;
+    }
+
+    button {
+      font-size: 2.3vw;
+      width: 35vw;
+      height: 6vw;
+      margin-left: 2%;
+      margin-bottom: 8%;
+    }
+  }
+
+  .dynamics-365 {
+    h2 {
+      padding: 5% 2% 1% 10%;
+      width: 90%;
+    }
+
+    p {
+      padding: 0 0 3% 10%;
+      width: 90%;
+    }
+
+    button {
+      font-size: 2.3vw;
+      width: 35vw;
+      height: 6vw;
+      margin-left: 10%;
+      margin-bottom: 10%;
+    }
+
+    .main-img2 {
+      margin-right: 0;
+    }
+  }
+
+  .intro-desc {
+    width: 32em;
+  }
 }
