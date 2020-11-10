@@ -3,44 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.scss">
-    <title>Document</title>
+    <link rel="stylesheet" href="form.scss">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0 ;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+    <title>DXC | form</title>
 </head>
 <body>
-    <form action="">
-        <div class="form_div">
-            <label for="first_name">First Name</label>
-            <input type="text" id="first_name" name="first_name">
-        </div>
-        <div class="form_div">
-            <label for="last_name">Last Name</label>
-            <input type="text" id="last_name" name="last_name">
-        </div>
-        <div class="form_div">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div class="form_div">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company">
-        </div>
-        <div class="form_div">
-            <label for="country">Country</label>
-            <input type="text" id="country" name="country">
-        </div>
-        <div class="form_div">
-            <label for="job_title">Job title</label>
-            <input type="text" id="job_title" name="job_title">
-        </div>
-        <div class="form_div">
-            <input type="checkbox" id="agree" name="agree">
-            <label for="agree">Yes, you can email me and process my data </label>
-        </div>
-        <div class="form_div">
-            <button>Submit</button>
-        </div>
+    <main class="main_content">
+        <div class="form_content">
+  
+            <form action="">
+                <div class="group">
+                    <input type="text" id="first_name" name="first_name" placeholder="&nbsp;">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="group">
+                    <input type="text" id="last_name" name="last_name" placeholder="&nbsp;">
+                    <label for="last_name">Last Name</label>
+                </div>
+                <div class="group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="&nbsp;">
+                </div>
+                <div class="group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <!-- <div class="group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country">
+                </div> -->
 
-    </form>
+                <div class="group">
+                    <label for="country"></label>
+                  <select name="country" id="country">
+                      <option value="Danmark">Country</option>
+                      <option value="Danmark">Danmark</option>
+                      <option value="Cuba">Cuba</option>
+                  </select>
+                </div>
+                <div class="group">
+                    <label for="job_title">Job title</label>
+                    <input type="text" id="job_title" name="job_title">
+                </div>
+                <div class="group">
+                    <input type="checkbox" id="agree" name="agree">
+                    <label for="agree">Yes, you can email me and process my data </label>
+                </div>
+                <div class="group">
+                    <button>Submit</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="text_content">
+            <img class="text_image" src="assets/ariadna/how-DXC-facilitates-your-D365-implementation.jpg" alt="DXC solution for life">
+            <p>Hvordan vurderer I, hvornår og hvor I skal rykke, når i gerne vil digitalisere virksomheden? 
+                Vi kan se, at verdens digitalisering skrider frem med hastige skridt, og 2020 har ikke sat hastigheden på
+                 denne proces ned. Hvis man vil med på den vindende vogn, så skal der lægges en plan, både kortsigtet og langsigtet.</p>
+            <p>Cloud-løsninger giver dig fundamentet for at rykke – enten i små eller store skridt. Her får du vores bud på en ”Solution for Life.”
+                 En kombination af fremtidssikrede platforme, løsninger og værktøjer, der tilsammen navigerer jeres virksomhed sikkert ind i jeres 
+                 digitale fremtid.</p>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
