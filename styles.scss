@@ -29,6 +29,7 @@ $purple: #6e2c91;
 $blue: #1172b9;
 $grey: #d9d9d9;
 $dark-grey: #666666;
+$whole-viewport: 100vw;
 
 /* general styling */
 body {
@@ -72,6 +73,7 @@ p {
   &:hover {
     background: transparent;
     color: black;
+    cursor: pointer;
   }
 }
 
@@ -141,6 +143,12 @@ p {
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 2%;
+  height: 100%;
+}
+
+.video-frame {
+  width: $whole-viewport * 0.28;
+  height: $whole-viewport * 0.28 * 0.5625;
 }
 
 .video,
@@ -287,9 +295,32 @@ p {
   .main-img2 {
     width: 75%;
   }
+
+  .video-frame {
+    width: $whole-viewport * 0.355;
+    height: $whole-viewport * 0.355 * 0.5625;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  .head {
+    background-image: url("assets/marcelina/headertabler-01.png");
+
+    h1 {
+      padding: 10% 0 4% 2%;
+    }
+  }
+
+  .logo {
+    padding-top: 1%;
+    width: 30vw;
+  }
+
+  .header-desc {
+    padding-bottom: 5%;
+    font-size: 2.2vw;
+  }
+
   .first-brochure {
     background-image: url("assets/marcelina/section2tablet-01.png");
   }
@@ -330,6 +361,11 @@ p {
   .main-img,
   .main-img2 {
     width: 100%;
+  }
+
+  .video-frame {
+    width: $whole-viewport * 0.48;
+    height: $whole-viewport * 0.48 * 0.5625;
   }
 
   .cloud-wave,
@@ -381,5 +417,199 @@ p {
 
   .intro-desc {
     width: 32em;
+  }
+
+  .expert-talk {
+    button {
+      font-size: 2.3vw;
+      width: 35vw;
+      height: 6vw;
+      margin-left: 33%;
+    }
+
+    p {
+      width: 32em;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .arrow {
+    width: 6vw;
+    height: 6vw;
+  }
+  .grid-wrapper {
+    grid-template-columns: 100%;
+    padding: 0;
+    h2 {
+      font-size: 5vw;
+      text-align: left;
+      padding: 5%;
+      margin: auto;
+      width: 80vw;
+    }
+
+    p {
+      padding: 2% 5% 4% 5%;
+      margin: auto;
+      width: 80vw;
+      font-size: 3.5vw;
+      text-align: left;
+    }
+    button {
+      width: 70vw;
+      height: 15vw;
+      margin-left: 15%;
+      font-size: 3.5vw;
+    }
+  }
+
+  div:first-child {
+    grid-row-start: 2;
+  }
+
+  .grid-left:first-child {
+    grid-row-start: 1;
+  }
+
+  .main-img,
+  .main-img2 {
+    padding: 5%;
+  }
+
+  .video-frame {
+    width: $whole-viewport * 0.9;
+    height: $whole-viewport * 0.9 * 0.5625;
+    margin: 5%;
+  }
+  .first-brochure,
+  .second-brochure,
+  .third-brochure,
+  .intro {
+    h2 {
+      font-size: 5vw;
+      text-align: left;
+      padding-top: 75%;
+      padding-left: 15%;
+    }
+
+    p {
+      padding: 2% 5% 4% 5%;
+      margin: auto;
+      width: 80vw;
+      font-size: 3.5vw;
+      text-align: left;
+    }
+
+    button {
+      width: 70vw;
+      height: 15vw;
+      margin-left: 15%;
+      font-size: 3.5vw;
+    }
+  }
+
+  .intro h2 {
+    padding: 5% 15%;
+  }
+
+  .head {
+    background-image: url("assets/marcelina/headermobile-01.png");
+    .logo {
+      width: 60vw;
+      padding-top: 5%;
+      padding-left: 2%;
+    }
+
+    h1 {
+      padding: 22% 0 5% 5%;
+      font-size: 8vw;
+    }
+
+    .header-desc {
+      font-size: 4.5vw;
+      padding-bottom: 60%;
+      padding-left: 5%;
+      width: 55vw;
+    }
+  }
+
+  .expert-talk {
+    p {
+      font-size: 3.5vw;
+      width: 80%;
+      margin: auto;
+      padding-top: 8%;
+    }
+    button {
+      width: 70vw;
+      height: 15vw;
+      margin: 10% 0 10% 15%;
+      font-size: 3.5vw;
+    }
+  }
+
+  .first-brochure {
+    background-image: url("assets/marcelina/section2mobileimg.png");
+  }
+
+  .second-brochure {
+    background-image: url("assets/marcelina/section3mobile.png");
+  }
+
+  .third-brochure {
+    background-image: url("assets/marcelina/section4mobile.png");
+    h2 {
+      padding-top: 80%;
+    }
+  }
+
+  .border {
+    border-bottom: 1px solid black;
+    margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .first-brochure,
+  .second-brochure,
+  .third-brochure,
+  .intro,
+  .video,
+  .text-wrapper,
+  .expert-talk {
+    h2 {
+      font-size: 7vw;
+      padding-left: 10%;
+    }
+
+    p {
+      font-size: 5vw;
+      width: 90vw;
+    }
+
+    button {
+      font-size: 4.5vw;
+      width: 85vw;
+      margin-left: 8%;
+    }
+  }
+
+  .head {
+    .header-desc {
+      font-size: 5vw;
+      width: 65vw;
+    }
+  }
+
+  .intro {
+    padding: 8% 0;
+  }
+
+  .grid-wrapper {
+    h2 {
+      padding-left: 0;
+    }
   }
 }
