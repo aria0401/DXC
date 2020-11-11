@@ -1,0 +1,255 @@
+.form_content form {
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+
+  .group {
+    margin-bottom: 2vw;
+    display: grid;
+  }
+  .group > * {
+    grid-area: 1/1;
+  }
+
+  input,
+  select {
+    border: 1px solid #21212133;
+    background: #f5f5f5;
+    border-radius: 6px;
+    margin-top: 4vw;
+  }
+
+  label {
+    place-self: center start;
+    pointer-events: none;
+    color: #6f2c91;
+    transform-origin: 0 100%;
+    transform: translate(10px, 0);
+  }
+
+  select {
+    color: #6f2c91;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select {
+    padding: 12px;
+  }
+
+  input[type="text"]:not(:placeholder-shown) + label,
+  input[type="email"]:not(:placeholder-shown) + label {
+    transform: translate(0, -100%) scale(0.95);
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  label {
+    will-change: transform, opacity;
+  }
+
+  label,
+  .country,
+  .submit {
+    opacity: 0.7;
+  }
+  .agree {
+    padding: 0 6vw;
+    a {
+      color: #1172b9;
+    }
+  }
+
+  .submit {
+    appearance: none;
+    background-color: #6f2c91;
+    border-color: transparent;
+    box-shadow: 5px 4px 9px -3px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    color: white;
+    font-size: 1.1rem;
+    padding: 3vw;
+    border-radius: 10px;
+  }
+  .submit:hover {
+    background-color: #f5f5f5;
+    border: 2px solid #6f2c91;
+    color: #6f2c91;
+    transition: 0.2s;
+  }
+}
+
+// Pseudo-classes / states
+
+input,
+select {
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #6f2c91;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid {
+  border-color: #6f2c91;
+  color: #6f2c91;
+  font-size: 0.9rem;
+}
+
+// ----------- checkbox ------ //
+
+input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: var(--border-radius, 0);
+  border: 0.075rem solid hsl(200 var(--saturation, 0%) 70%);
+  background: hsl(200 50% 100%);
+  margin: 0;
+  padding: 0;
+  display: inline-grid;
+  outline: none;
+  transition: 0.2s;
+}
+
+input[type="checkbox"] {
+  --border-radius: 0.3rem;
+}
+
+input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 0.2rem hsl(200 50% 85%);
+}
+
+@supports (-webkit-appearance: none) or (appearance: none) {
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  input[type="checkbox"]:checked {
+    background: hsl(279 769% 56%);
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  input[type="checkbox"]::after {
+    content: "";
+    width: 0.3rem;
+    height: 0.7rem;
+    border-radius: 0;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    transition: 0.3s;
+    transform: translateY(-0.1rem) rotate(0deg);
+    place-self: center;
+    opacity: 0;
+  }
+
+  input[type="checkbox"]:checked::after {
+    opacity: 1;
+    transform: translateY(-0.1rem) rotate(45deg);
+  }
+}
+
+/*------------------------------MEDIAQUERY 500px-----------------------*/
+
+@media screen and (min-width: 500px) {
+  .form_content {
+    width: 60vw;
+  }
+}
+
+/*------------------------------MEDIAQUERY 600px-----------------------*/
+
+@media screen and (min-width: 600px) {
+  .form_content {
+    width: 50vw;
+  }
+}
+
+/*------------------------------MEDIAQUERY 700px-----------------------*/
+
+@media screen and (min-width: 700px) {
+  .form_content form {
+    .group {
+      margin-bottom: 1vw;
+    }
+    .submit {
+      padding: 1.6vw;
+    }
+  }
+  label {
+    margin-top: 4px;
+    padding-top: 6px;
+  }
+}
+
+/*------------------------------MEDIAQUERY 800px-----------------------*/
+
+@media screen and (min-width: 800px) {
+  .form_content {
+    width: 40vw;
+    margin-top: 6vh;
+
+    form input,
+    form select {
+      margin-top: 3vw;
+    }
+  }
+}
+
+/*------------------------------MEDIAQUERY 1000px-----------------------*/
+
+@media screen and (min-width: 1000px) {
+  .form_content {
+    width: 35vw;
+    margin-left: 4vw;
+    form {
+      input,
+      select {
+        margin-top: 2vw;
+      }
+
+      .agree {
+        padding: 0 2vw;
+      }
+      .submit {
+        padding: 1vw;
+      }
+    }
+  }
+}
+
+/*------------------------------MEDIAQUERY 1200px-----------------------*/
+
+@media screen and (min-width: 1200px) {
+  .form_content {
+    width: 30vw;
+    margin-top: 2vh;
+    form {
+      input[type="checkbox"] {
+        margin-top: 1vh;
+      }
+    }
+  }
+}
+
+/*------------------------------MEDIAQUERY 1400px-----------------------*/
+
+@media screen and (min-width: 1400px) {
+  .form_content {
+    width: 24vw;
+    margin-left: 6vw;
+    form {
+      .group {
+        margin-bottom: 0;
+        .agree {
+          margin-bottom: 4vh;
+        }
+      }
+    }
+  }
+}

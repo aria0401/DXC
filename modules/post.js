@@ -1,7 +1,8 @@
 // import { key } from "./config";
 import * as config from "./config";
 
-export function post(data){
+export function post(data, callback){
+
     const postData = JSON.stringify(data);
     fetch(config.endpoint, {
       method: "post",
@@ -13,5 +14,5 @@ export function post(data){
       body: postData,
     })
       .then(res => res.json())
-      //.then(callback);
+      .then(callback);
   }

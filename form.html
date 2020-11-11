@@ -16,61 +16,66 @@
     <title>DXC | form</title>
 </head>
 <body>
+    <header class="header_form">
+        <img class="dxc_logo" src="assets/ariadna/dxc_logo_hz_blk_rgb-XXSML.jpg" alt="dxc logo">
+    </header>
+    <h1>Solution for Life</h1>
     <main class="main_content">
         <div class="form_content">
   
-            <form action="">
+            <form  action="">
                 <div class="group">
-                    <input type="text" id="first_name" name="first_name" placeholder="&nbsp;">
-                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="&nbsp;" required>
+                    <label for="first_name">Fornavn</label>
                 </div>
                 <div class="group">
-                    <input type="text" id="last_name" name="last_name" placeholder="&nbsp;">
-                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="&nbsp;" required>
+                    <label for="last_name">Efternavn</label>
                 </div>
                 <div class="group">
+                    <input type="email" id="email" name="email" placeholder="&nbsp;" required pattern=".+\.[a-z]+$">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="&nbsp;">
                 </div>
                 <div class="group">
-                    <label for="company">Company</label>
-                    <input type="text" id="company" name="company">
+                    <input type="text" id="company" name="company" placeholder="&nbsp;" required>
+                    <label for="company">Firma</label>
                 </div>
-                <!-- <div class="group">
-                    <label for="country">Country</label>
-                    <input type="text" id="country" name="country">
-                </div> -->
+                <div class="group">
+                    <input type="text" id="job_title" name="job_title" placeholder="&nbsp;" required>
+                    <label for="job_title">Jobtitel</label>
+                </div>
 
                 <div class="group">
-                    <label for="country"></label>
-                  <select name="country" id="country">
-                      <option value="Danmark">Country</option>
-                      <option value="Danmark">Danmark</option>
-                      <option value="Cuba">Cuba</option>
-                  </select>
+                    <select name="country" id="country" class="select_country" required aria-invalid="true">
+                        <option value="Danmark">Land (Vælg)</option>
+                        <option value="Danmark">Danmark</option>
+                        <option value="Cuba">Cuba</option>
+                    </select>
+                  
+                </div>
+
+                <div class="group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree" class="agree">Jeg giver tilladelse til at modtage emails relateret til marketing <a href="">Læs mere</a></label>
                 </div>
                 <div class="group">
-                    <label for="job_title">Job title</label>
-                    <input type="text" id="job_title" name="job_title">
-                </div>
-                <div class="group">
-                    <input type="checkbox" id="agree" name="agree">
-                    <label for="agree">Yes, you can email me and process my data </label>
-                </div>
-                <div class="group">
-                    <button>Submit</button>
+                    <button class="submit">Fortsæt</button>
                 </div>
 
             </form>
+            <img class="form_image" src="assets/ariadna/solution-for-life.png" alt="DXC solution for life">
         </div>
         <div class="text_content">
-            <img class="text_image" src="assets/ariadna/how-DXC-facilitates-your-D365-implementation.jpg" alt="DXC solution for life">
+            <img class="text_image" src="assets/ariadna/dxc_solutions_for_life.png" alt="DXC solution for life">
             <p>Hvordan vurderer I, hvornår og hvor I skal rykke, når i gerne vil digitalisere virksomheden? 
                 Vi kan se, at verdens digitalisering skrider frem med hastige skridt, og 2020 har ikke sat hastigheden på
                  denne proces ned. Hvis man vil med på den vindende vogn, så skal der lægges en plan, både kortsigtet og langsigtet.</p>
             <p>Cloud-løsninger giver dig fundamentet for at rykke – enten i små eller store skridt. Her får du vores bud på en ”Solution for Life.”
                  En kombination af fremtidssikrede platforme, løsninger og værktøjer, der tilsammen navigerer jeres virksomhed sikkert ind i jeres 
                  digitale fremtid.</p>
+             <img class="text_image_after" src="assets/ariadna/solution-for-life.png" alt="DXC solution for life">
+
+
         </div>
     </main>
     <script src="script.js"></script>

@@ -1,6 +1,8 @@
 //import * as config from "./modules/config";
-import { post } from "./modules/post";
 // post(config.endpoint, prepareData);
+import { post } from "./modules/post";
+import {changeSelect} from "./modules/changeSelect";
+
 
 function prepareData(){
 
@@ -8,8 +10,6 @@ function prepareData(){
     form.addEventListener("submit", (e)=>{
         e.preventDefault();
 
-        console.log("first name is: ", form.elements.first_name.value);
-        
         const myData = {
             first_name: form.elements.first_name.value,
             last_name:form.elements.last_name.value,
@@ -19,10 +19,13 @@ function prepareData(){
             job_title:form.elements.job_title.value,
         };
         console.log("myData is:", myData);
-        post(myData);
+        post(myData, ()=>{
+            window.location= "asset.html";
+        });
     })
 
 
 }
 
+changeSelect();
 prepareData();
