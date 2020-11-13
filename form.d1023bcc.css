@@ -39,7 +39,6 @@
   padding: 1rem;
   background: white;
   box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
 }
 .form_content form .group {
   margin-bottom: 2vw;
@@ -52,7 +51,6 @@
 .form_content form select {
   border: 1px solid #21212133;
   background: #f5f5f5;
-  border-radius: 6px;
   margin-top: 4vw;
 }
 .form_content form label {
@@ -99,7 +97,7 @@
   color: white;
   font-size: 1.1rem;
   padding: 3vw;
-  border-radius: 10px;
+  cursor: pointer;
 }
 .form_content form .submit:hover {
   background-color: #f5f5f5;
@@ -128,7 +126,6 @@ input[type=email]:valid {
 input[type=checkbox] {
   width: 1.2rem;
   height: 1.2rem;
-  border-radius: var(--border-radius, 0);
   border: 0.075rem solid hsl(200, var(--saturation, 0%), 70%);
   background: white;
   margin: 0;
